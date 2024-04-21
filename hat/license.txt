@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sorting Hat
+* source:	https://sketchfab.com/3d-models/sorting-hat-b5d05dc911be4d49a631c417568b0945
+* author:	felipeesquivel (https://sketchfab.com/felipeesquivel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sorting Hat" (https://sketchfab.com/3d-models/sorting-hat-b5d05dc911be4d49a631c417568b0945) by felipeesquivel (https://sketchfab.com/felipeesquivel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -2,10 +2,12 @@ body {
   margin: 0;
 }
 
-#app{
-  width:250px;
-  height:250px;
-  background-color: green;
+#app {
+  width:auto; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  display: flex;
+  justify-content: left;
+  position: absolute;
 }
 
 .menuContainer {
@@ -130,7 +132,7 @@ body {
 
 .container .btn:nth-child(1)::before,
 .container .btn:nth-child(1)::after {
-  background: #ff2d2d;
-  box-shadow: 0 0 5px #ff2d2d, 0 0 15px #ff2d2d, 0 0 30px #ff2d2d,
-    0 0 60px #ff2d2d;
+  background: #2dfffb;
+  box-shadow: 0 0 2px #2dfffb, 0 0 2px #2dfffb, 0 0 2px #2dfffb,
+    0 0 60px #2dfffb;
 }

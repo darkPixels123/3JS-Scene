@@ -1,0 +1,8 @@
+Model Information:
+* title:	Megaman-NT (PC / Console)
+* source:	https://sketchfab.com/3d-models/megaman-nt-pc-console-f2c4851bd44a489da25c893f6ba8dc7a
+* author:	Leonardo Carvalho (https://sketchfab.com/livrosparacriancas)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
