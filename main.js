@@ -132,51 +132,15 @@ function speak() {
         width: 600,
         padding: "3em",
         color: "#0199e6",
-        background: "#fff url(/images/trees.png)",
+        background: "#fff url(./images/trees.png)",
         backdrop: `
         rgba(1, 153, 230,0.4)
-        url("/megaman/gif/megaman.gif")
+        url("./megaman/gif/megaman.gif")
         left top
         no-repeat
     `
     });
 }
-
-function spin() {
-    // Set up the initial rotation values
-    const initialRotationY = model.rotation.y;
-    const targetRotationY = initialRotationY + Math.PI * 2; // Rotate 360 degrees (2 * Math.PI)
-
-    // Create a Tween animation
-    const tween = new tween.Tween({ rotationY: initialRotationY })
-        .to({ rotationY: targetRotationY }, 2000) // 2000 milliseconds duration
-        .easing(tween.Easing.Quadratic.InOut) // Use quadratic easing for smooth start and end
-        .onUpdate(function () {
-            // Update the rotation of the model
-            model.rotation.y = this.rotationY;
-        })
-        .start() // Start the animation
-        .onComplete(function () {
-            // When the animation completes, set the rotation back to the initial value
-            model.rotation.y = initialRotationY;
-        });
-}
-
-
-
-let isJumping = false;
-
-function jump() {
-    if (!isJumping) {
-        // Make the model jump
-        model.position.y += 1; // Adjust the jump height as needed
-        isJumping = true;
-    } else {
-        // Return the model to its normal stage
-        model.position.y = -1.5; // Adjust the normal position as needed
-        isJumping = false;
-    }
-};
 
 // Animation loop
 function animate() {
