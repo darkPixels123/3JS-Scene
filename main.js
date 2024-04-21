@@ -7,6 +7,7 @@ const camera = new THREE.PerspectiveCamera(
     0.5,
     100
 );
+
 camera.position.z = 15;
 camera.position.y = 2;
 
@@ -74,15 +75,82 @@ controls.maxPolarAngle = Math.PI / 2;
 
 // controls
 
+// Array of heroic sentences
+const heroicSentences = [
+    "I am unstoppable!",
+    "Justice will prevail!",
+    "Evil beware, for I am here!",
+    "With great power comes great responsibility.",
+    "I fight for truth and justice!",
+    "The city needs a hero, and I will answer the call.",
+    "No villain can stand against me!",
+    "I will protect the innocent!",
+    "I am the hero this city deserves.",
+    "In the face of danger, I will not falter!",
+    "For honor and glory!",
+    "I will never give up!",
+    "My courage knows no bounds!",
+    "I am a beacon of hope!",
+    "Evildoers, your reign ends now!",
+    "The power of justice flows through me!",
+    "I will defend the weak and oppressed.",
+    "Even in the darkest of times, I will shine bright!",
+    "Nothing can stop me from saving the day!",
+    "I am the defender of truth and righteousness!"
+];
+
+function exit() {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Deleted!",
+                text: "Model is Destroyed.",
+                icon: "success"
+            });
+            document.getElementById("app").innerHTML = "";
+        }
+    });
+}
+
+// Function to speak a heroic sentence
+function speak() {
+    // Randomly select a sentence from the array
+    const randomIndex = Math.floor(Math.random() * heroicSentences.length);
+    const sentence = heroicSentences[randomIndex];
+
+    // Display the selected sentence as an alert message
+    Swal.fire({
+        title: sentence,
+        width: 600,
+        padding: "3em",
+        color: "#0199e6",
+        background: "#fff url(/images/trees.png)",
+        backdrop: `
+        rgba(1, 153, 230,0.4)
+        url("/megaman/gif/megaman.gif")
+        left top
+        no-repeat
+    `
+    });
+}
+
 function spin() {
     // Set up the initial rotation values
     const initialRotationY = model.rotation.y;
-    const targetRotationY = model.rotation.y + Math.PI * 2; // Rotate 360 degrees (2 * Math.PI)
+    const targetRotationY = initialRotationY + Math.PI * 2; // Rotate 360 degrees (2 * Math.PI)
 
     // Create a Tween animation
-    const tween = new TWEEN.Tween({ rotationY: initialRotationY })
+    const tween = new tween.Tween({ rotationY: initialRotationY })
         .to({ rotationY: targetRotationY }, 2000) // 2000 milliseconds duration
-        .easing(TWEEN.Easing.Quadratic.InOut) // Use quadratic easing for smooth start and end
+        .easing(tween.Easing.Quadratic.InOut) // Use quadratic easing for smooth start and end
         .onUpdate(function () {
             // Update the rotation of the model
             model.rotation.y = this.rotationY;
@@ -93,6 +161,7 @@ function spin() {
             model.rotation.y = initialRotationY;
         });
 }
+
 
 
 let isJumping = false;

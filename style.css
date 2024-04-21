@@ -3,11 +3,15 @@ body {
 }
 
 #app {
-  width:auto; /* Adjust width as needed */
+  width: auto; /* Adjust width as needed */
   height: auto; /* Adjust height as needed */
   display: flex;
   justify-content: left;
   position: absolute;
+}
+
+#app:hover {
+  cursor: pointer;
 }
 
 .menuContainer {
